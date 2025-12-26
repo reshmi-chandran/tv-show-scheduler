@@ -9,6 +9,12 @@ Detailed logic to replace the Excel-based full-season post-production schedule g
 - Support user-controlled compression of specific phases by 0–4 business days when production-to-delivery timelines don’t fit.
 - Maintain explainability: every date should be traceable to its rule and inputs.
 
+### Quick Narrative Example (plain English)
+- **Inputs**: Region US West calendar; Production start = Mon Jan 6; Episode length drives default edit durations; Target delivery = Fri Mar 14.
+- **Propagation**: Editor cut starts Jan 6 → ends Fri Jan 17 (10bd). Director cut starts Mon Jan 20 → ends Fri Jan 24. Network review starts Mon Jan 27 → ends Wed Jan 29. Lock Thu Jan 30 → Fri Jan 31. Finishing starts Mon Feb 3 → ends Mon Feb 10. Delivery Tue Feb 11.
+- **Holiday handling**: If US West holiday on Mon Feb 3, finishing shifts to Tue Feb 4; delivery moves to Thu Feb 13, with a reason code.
+- **Compression scenario**: Need delivery Fri Feb 7 (pull in 4bd). Apply safe compression: Editor cut -2bd, Director cut -1bd, Finishing -1bd (all within 0–4bd and above minimums). Recompute → delivery Fri Feb 7; reasons logged.
+
 ### Core Concepts
 - **Episode template**: Defines ordered phases with default durations and dependencies.
 - **Calendars**: Business-day source per region; allow overrides at show or episode level.
