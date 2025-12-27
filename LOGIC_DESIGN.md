@@ -15,6 +15,22 @@ Detailed logic to replace the Excel-based full-season post-production schedule g
 - **Holiday handling**: If US West holiday on Mon Feb 3, finishing shifts to Tue Feb 4; delivery moves to Thu Feb 13, with a reason code.
 - **Compression scenario**: Need delivery Fri Feb 7 (pull in 4bd). Apply safe compression: Editor cut -2bd, Director cut -1bd, Finishing -1bd (all within 0–4bd and above minimums). Recompute → delivery Fri Feb 7; reasons logged.
 
+<<<<<<< HEAD
+=======
+### High-Level Flow (visual)
+```mermaid
+flowchart TD
+    A[Inputs<br/>Production start, episode lengths, region calendar] --> B[Episode generator<br/>Back-to-back shells]
+    B --> C[Phase template & dependency graph<br/>Editor → Director → Network → Lock → Finishing → Delivery]
+    C --> D[Business-day engine<br/>Skip weekends & union-region holidays]
+    D --> E[Propagation<br/>Forward pass computes milestones]
+    E --> F{Delivery fits target?}
+    F -- Yes --> G[Publish schedule<br/>Explain reasons]
+    F -- No --> H[Compression loop<br/>User selects 0–4bd per phase]
+    H --> D
+```
+
+>>>>>>> 19b1f810b7f74f1bf6bd773b7ce43261ebe685c2
 ### Core Concepts
 - **Episode template**: Defines ordered phases with default durations and dependencies.
 - **Calendars**: Business-day source per region; allow overrides at show or episode level.
