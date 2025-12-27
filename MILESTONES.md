@@ -1,9 +1,5 @@
 ## Alignment and MVP Plan
 
-### Guiding Priorities
-- Correctness over completeness for MVP: validate one production→delivery chain against the existing Excel before expanding scope.
-- Compression is never silent: always warn, require explicit user choice, and log reasons, even when overrides are allowed.
-
 ### Milestones for Early Excel Parity (with exit criteria)
 1) **Single-chain parity**
    - Goal: One production→delivery chain matches Excel dates for the same inputs and calendar.
