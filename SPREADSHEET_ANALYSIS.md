@@ -28,3 +28,10 @@
 - Normalize holiday set from `Holidays` and ensure the business-day engine matches `Workdays` weekend/holiday skips.
 - Confirm any compressed scenarios present in the sheets; if none, define one controlled compression case for validation.
 
+### Example Parity Target (Episode 101, selected milestones)
+- Shoot D1–D15: 06/10/2025 through 07/01/2025 (15 shoot days).
+- LDOD: 07/02/2025; Editor’s Cut: 07/08/2025; Director’s Cut: 07/14/2025.
+- DC2: 07/17/2025; PC Start: 07/18/2025; PC End: 07/28/2025.
+- Network Cut 1: 07/29/2025; Network Cut 2: 08/05/2025; Lock: 08/12/2025.
+- MX/MX2/MX3: 08/12–08/13/2025; Delivery: 09/09/2025. (Air date TBD in sheet.)
+
