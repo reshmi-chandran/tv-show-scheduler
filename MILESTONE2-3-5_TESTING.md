@@ -1,7 +1,6 @@
 ## Milestones 2, 3, and 5 Testing (UI)
 
 UI Portal: `https://tv-post-schedule-portal.vercel.app/`
-API Base: `https://tv-post-schedule-engine-falling-night-6230.fly.dev` (for reference)
 
 Note: Milestone 4 (compression policies/delivery-fit) is skipped for now.
 
@@ -26,4 +25,5 @@ Note: Milestone 4 (compression policies/delivery-fit) is skipped for now.
 - `warnings` / `conflicts`: empty when all is good; messages if something can’t fit.
 - `decisionLog`: notes about the run (e.g., which anchor was used).
 - `meta`: includes hashes/versions for traceability.
+
 
